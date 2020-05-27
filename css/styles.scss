@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'nimbus-sans';
+    letter-spacing: .015em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+
+html {
+    overflow-x: hidden;
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.button {
+    background: black;
+    color: white;
+    padding: 12px 26px;
+    transition-duration: .3s;
+    &:hover {
+        background: #333;
+    }
+}
+#header {
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    margin: 0 auto;
+    transition-duration: .3s;
+    z-index: 10;
+    .logo {
+        height: 50px;
+        margin-left: 60px;
+        transition-duration: .3s;
+        opacity: 1;
+    }
+    #textlogo {
+        font-size: 1em;
+        margin-left: 60px;
+        transition-duration: .3s;
+        text-transform: uppercase;
+        position: absolute;
+        margin-top: -38px;
+        opacity: 0;
+    }
+    .links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 550px;
+        margin-right: 60px;
+        transition-duration: .3s;
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .dot {
+                position: absolute;
+                margin-top: 17px;
+                height: 5px;
+                width: 5px;
+                background: #000;
+                border-radius: 2.5px;
+                transition-duration: .3s;
+                opacity: 0;
+            }
+            &:hover .dot {
+                opacity: 1;
+            }
+        }
+        .selected {
+            opacity: .5;
+        }
+        .x-icon {
+            display: none;
+        }
+    }
+    #checkbox {
+        position: absolute;
+        top: -100px;
+        opacity: 0;
+    }
+    .menu-icon {
+        display: none;
+    }
+}
+#wrap {
+    min-height: calc(100vh - 64px);
+    box-sizing: border-box;
+}
+footer {
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 60px;
+    box-sizing: border-box;
+    .copyright {
+        opacity: .5;
+    }
+    .social {
+        justify-content: center;
+        align-items: center;
+        margin: 0 -7px;
+        img {
+            height: 20px;
+            margin: 0 7px;
+        }
+    }
+
+}
+@media screen and (max-width: 900px) {
+    #header {
+        .logo {
+            margin-left: 30px;
+        }
+        #textlogo {
+            margin-left: 30px;
+        }
+        .links {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: -100%;
+            margin: 0;
+            background: white;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            box-sizing: border-box;
+            padding: 30px;
+            transition-duration: .3s;
+            z-index: 11;
+            a {
+                font-size: 40px;
+                line-height: 1;
+                margin-bottom: 20px;
+                .dot {
+                    display: none;
+                }
+            }
+            .x-icon {
+                display: block;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                img {
+                    height: 24px;
+                }
+            }
+        }
+        .menu-icon {
+            display: block;
+            margin: 0 15px 0 0;
+            z-index: 10;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                height: 24px;
+                margin: 0;
+            }
+        }
+        #checkbox:checked ~ .links{
+            left: 0;
+        }
+    }
+    footer {
+        font-size: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px 30px;
+        box-sizing: border-box;
+        .copyright {
+            opacity: .5;
+        }
+        .social {
+            justify-content: center;
+            align-items: center;
+            margin: 0 -7px;
+            img {
+                height: 20px;
+                margin: 0 7px;
+            }
+        }
+    
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background: white;
+}
+::-webkit-scrollbar-thumb {
+    background: black;
+}
