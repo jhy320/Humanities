@@ -1,10 +1,11 @@
-$color: black;
+$color: #353535;
 $red: rgb(224,62,62);
 * {
     margin: 0;
     padding: 0;
     letter-spacing: .015em;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    //font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: halyard-display, sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     strong {
@@ -15,15 +16,22 @@ h1, h2, h3, h4, h5, p {
     color: $color;
     line-height: 1;
 }
+::-webkit-scrollbar {
+    width: 12px;
+    background: white;
+}
+::-webkit-scrollbar-thumb {
+    background: $color;
+}
 a {
-    color: black;
+    color: $color;
     text-decoration: underline;
     font-weight: 600;
 }
 
 html {
     overflow-x: hidden;
-    font-size: 16px;
+    font-size: 18px;
     scroll-behavior: smooth;
 }
 body {
@@ -37,33 +45,66 @@ body {
     max-width: 900px;
     box-sizing: border-box;
     padding: 100px;
+    padding-bottom: 0;
 }
-header {
-    margin-top: 40px;
-    p {
-        font-size: 108px;
-        margin-bottom: 20px;
+
+.hero {
+    height: calc(100vh - 80px);
+    width: 100%;
+    margin-top: 80px;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: #F1F6F6;
+    .info {
+        position: absolute;
+        width: 100%;
+        background: #ff4d4d;
+        top: 80px;
+        left: 0;
+        padding: 16px 100px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: none;
+        text-align: center;
     }
-    h1 {
-        font-size: 72px;
-        margin-bottom: 20px;
-    }
-    h2 {
-        font-size: 36px;
-    }
-    h3 {
-        margin: 20px 0 50px 0;
-        color: $red;
+    .section {
+        h1 {
+            font-size: 8vw;
+            font-weight: 400;
+            max-width: 80vw;
+        }
+        p {
+            padding: 40px 0;
+            max-width: 600px;
+            font-size: 24px;
+        }
         a {
-            color: $red;
-            font-size: 22px;
+            font-size: 18px;
+            font-weight: 400;
+            text-decoration: none;
+            color: white;
+            background: $color;
+            padding: 20px 40px;
+            transition-duration: .4s;
+            &:hover {
+                background: #000;
+            }
         }
     }
 }
+
 p {
     margin-bottom: 1em;
     line-height: 1.25;
-    font-size: 16px;
+    font-size: 18px;
     a {
         font-weight: 400;
     }
@@ -71,7 +112,8 @@ p {
 .instructors {
     margin: 60px 0;
     #instructors {
-        font-size: 30px;
+        font-size: 80px;
+        font-weight: 400;
         text-decoration: none;
     }
     hr {
@@ -103,7 +145,8 @@ p {
         padding-bottom: 30px;
     }
     #Overview {
-        font-size: 30px;
+        font-size: 80px;
+        font-weight: 400;
         text-decoration: none;
     }
     ul {
@@ -119,7 +162,8 @@ p {
         padding-bottom: 30px;
     }
     #Schedule {
-        font-size: 30px;
+        font-size: 80px;
+        font-weight: 400;
         text-decoration: none;
     }
     hr {
@@ -137,7 +181,8 @@ p {
         padding-bottom: 30px;
     }
     #Enrollment {
-        font-size: 30px;
+        font-size: 80px;
+        font-weight: 400;
         text-decoration: none;
     }
     hr {
@@ -147,32 +192,17 @@ p {
     }
 }
 .interestform {
-    font-size: 30px;
+    font-size: 80px;
+    font-weight: 400;
+    text-decoration: none;
+    border-bottom: 4px solid $color;
 }
 #bottom {
     opacity: 0.6;
-    margin-top: 40px;
+    padding-top: 100px;
 }
 
 @media screen and (max-width: 830px) {
-    header {
-        margin-top: 40px;
-        h1 {
-            font-size: 60px;
-            margin-bottom: 20px;
-        }
-        h2 {
-            font-size: 30px;
-        }
-        h3 {
-            margin: 20px 0 50px 0;
-            color: $red;
-            a {
-                color: $red;
-                font-size: 20px;
-            }
-        }
-    }
     .instructors {
         .row {
             flex-direction: column;
@@ -191,26 +221,59 @@ p {
 }
 
 @media screen and (max-width: 750px) {
-    header {
-        margin-top: 60px;
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
+    .hero {
+        width: 100%;
+        margin-top: 80px;
+        padding: 80px 30px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background: #F1F6F6;
+        .info {
+            position: absolute;
+            width: 100%;
+            background: #ff4d4d;
+            top: 80px;
+            left: 0;
+            padding: 16px 30px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            font-weight: 400;
+            text-decoration: none;
+            text-align: center;
         }
-        h2 {
-            font-size: 1.5em;
-        }
-        h3 {
-            margin: 20px 0 50px 0;
-            color: $red;
+        .section {
+            h1 {
+                font-size: 10vw;
+                font-weight: 400;
+                max-width: 100vw;
+            }
+            p {
+                padding: 40px 0;
+                max-width: 600px;
+                font-size: 18px;
+            }
             a {
-                color: $red;
-                font-size: 1em;
-                line-height: 1.25;
+                font-size: 18px;
+                font-weight: 400;
+                text-decoration: none;
+                color: white;
+                background: $color;
+                padding: 20px 40px;
+                transition-duration: .4s;
+                &:hover {
+                    background: #000;
+                }
             }
         }
     }
     .page-body {
         padding: 30px;
+        padding-top: 100px;
     }
 }
