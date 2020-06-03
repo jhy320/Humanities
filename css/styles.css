@@ -7,6 +7,10 @@
   -webkit-font-smoothing: antialiased;
 }
 
+* strong {
+  font-weight: 600;
+}
+
 h1, h2, h3, h4, h5, p {
   color: #37352f;
   line-height: 1;
@@ -15,6 +19,7 @@ h1, h2, h3, h4, h5, p {
 a {
   color: black;
   text-decoration: underline;
+  font-weight: 600;
 }
 
 html {
@@ -58,12 +63,16 @@ p {
   line-height: 1.25;
 }
 
+p a {
+  font-weight: 400;
+}
+
 .instructors {
   margin: 60px 0;
 }
 
 .instructors #instructors {
-  font-size: 1.5em;
+  font-size: 30px;
   text-decoration: none;
 }
 
@@ -107,7 +116,7 @@ p {
 }
 
 .overview #Overview {
-  font-size: 1.5em;
+  font-size: 30px;
   text-decoration: none;
 }
 
@@ -117,5 +126,56 @@ p {
 
 .overview ul li {
   margin-bottom: 1em;
+}
+
+.schedule {
+  margin: 60px 0;
+}
+
+.schedule h2 {
+  padding-bottom: 30px;
+}
+
+.schedule #Schedule {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.schedule hr {
+  border: 0px solid #ddd;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+.schedule .indent {
+  margin-left: 20px;
+}
+
+.enrollment {
+  margin: 60px 0;
+}
+
+.enrollment h2 {
+  padding-bottom: 30px;
+}
+
+.enrollment #Enrollment {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.enrollment hr {
+  border: 0px solid #ddd;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+.interestform {
+  font-size: 30px;
+}
+
+#bottom {
+  opacity: 0.6;
+  margin-top: 40px;
 }
 /*# sourceMappingURL=styles.css.map */
