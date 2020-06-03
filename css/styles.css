@@ -144,14 +144,19 @@ p a {
   font-weight: 400;
 }
 
-.instructors {
-  margin: 60px 0;
+.anchor {
+  position: relative;
+  top: -80px;
 }
 
-.instructors #instructors {
+.section h2 {
   font-size: 80px;
   font-weight: 400;
   text-decoration: none;
+}
+
+.instructors {
+  margin: 60px 0;
 }
 
 .instructors hr {

@@ -109,13 +109,17 @@ p {
         font-weight: 400;
     }
 }
+.anchor {
+    position: relative;
+    top: -80px;
+}
+.section h2 {
+    font-size: 80px;
+    font-weight: 400;
+    text-decoration: none;
+}
 .instructors {
     margin: 60px 0;
-    #instructors {
-        font-size: 80px;
-        font-weight: 400;
-        text-decoration: none;
-    }
     hr {
         border: 0px solid #ddd;
         border-top: 1px solid #ddd;
