@@ -23,12 +23,17 @@
         <label for="checkbox" class="menu-icon transition"><img src="img/menu.svg" alt=""></label>
         <a class="logo" href="/">Humanities Class</a>
         <ul>
-            <a class="link" href="#intro">Intro</a>
-            <a class="link" href="#Instructors">Instructors</a>
-            <a class="link" href="#Overview">Overview</a>
-            <a class="link" href="#Schedule">Schedule</a>
-            <a class="link" href="#Enrollment">Enrollment</a>
-            <a target="none" href="https://forms.gle/iSV5QTAMqSi6ajAz9" class="apply">Apply</a>
+            <a onclick="checkbox()" class="link" href="#intro">Intro</a>
+            <a onclick="checkbox()" class="link" href="#Instructors">Instructors</a>
+            <a onclick="checkbox()" class="link" href="#Overview">Overview</a>
+            <a onclick="checkbox()" class="link" href="#Schedule">Schedule</a>
+            <a onclick="checkbox()" class="link" href="#Enrollment">Enrollment</a>
+            <a onclick="checkbox()" target="none" href="https://forms.gle/iSV5QTAMqSi6ajAz9" class="apply">Apply</a>
+            <script>
+                function checkbox() {
+                    document.getElementById("checkbox").checked = false;
+                }
+            </script>
         </ul>
     </header>
     <div class="hero">
