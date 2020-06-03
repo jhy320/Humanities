@@ -12,7 +12,7 @@
 }
 
 h1, h2, h3, h4, h5, p {
-  color: #37352f;
+  color: black;
   line-height: 1;
 }
 
@@ -28,24 +28,46 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .page-body {
-  margin: 0 auto;
-  padding: 100px;
+  width: 100vw;
   max-width: 900px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 100px;
+}
+
+header {
+  margin-top: 40px;
 }
 
 header p {
-  font-size: 6em;
+  font-size: 108px;
   margin-bottom: 20px;
 }
 
 header h1 {
-  font-size: 4em;
+  font-size: 72px;
   margin-bottom: 20px;
 }
 
 header h2 {
-  font-size: 2em;
+  font-size: 36px;
 }
 
 header h3 {
@@ -55,12 +77,13 @@ header h3 {
 
 header h3 a {
   color: #e03e3e;
-  font-size: 1.25em;
+  font-size: 22px;
 }
 
 p {
   margin-bottom: 1em;
   line-height: 1.25;
+  font-size: 16px;
 }
 
 p a {
@@ -105,6 +128,10 @@ p a {
 .instructors .row .column img {
   margin-right: 40px;
   width: 140px;
+}
+
+.instructors .row .column p:last-child {
+  margin-bottom: 0;
 }
 
 .overview {
@@ -177,5 +204,76 @@ p a {
 #bottom {
   opacity: 0.6;
   margin-top: 40px;
+}
+
+@media screen and (max-width: 830px) {
+  header {
+    margin-top: 40px;
+  }
+  header h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+  header h2 {
+    font-size: 30px;
+  }
+  header h3 {
+    margin: 20px 0 50px 0;
+    color: #e03e3e;
+  }
+  header h3 a {
+    color: #e03e3e;
+    font-size: 20px;
+  }
+  .instructors .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .instructors .row .column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .instructors .row .column img {
+    margin-bottom: 30px;
+    width: 140px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    margin-top: 60px;
+  }
+  header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  header h2 {
+    font-size: 1.5em;
+  }
+  header h3 {
+    margin: 20px 0 50px 0;
+    color: #e03e3e;
+  }
+  header h3 a {
+    color: #e03e3e;
+    font-size: 1em;
+    line-height: 1.25;
+  }
+  .page-body {
+    padding: 30px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

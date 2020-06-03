@@ -1,4 +1,4 @@
-$color: rgb(55, 53, 47);
+$color: black;
 $red: rgb(224,62,62);
 * {
     margin: 0;
@@ -27,36 +27,43 @@ html {
     scroll-behavior: smooth;
 }
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 .page-body {
-    margin: 0 auto;
-    padding: 100px;
+    width: 100vw;
     max-width: 900px;
+    box-sizing: border-box;
+    padding: 100px;
 }
 header {
+    margin-top: 40px;
     p {
-        font-size: 6em;
+        font-size: 108px;
         margin-bottom: 20px;
     }
     h1 {
-        font-size: 4em;
+        font-size: 72px;
         margin-bottom: 20px;
     }
     h2 {
-        font-size: 2em;
+        font-size: 36px;
     }
     h3 {
         margin: 20px 0 50px 0;
         color: $red;
         a {
             color: $red;
-            font-size: 1.25em;
+            font-size: 22px;
         }
     }
 }
 p {
     margin-bottom: 1em;
     line-height: 1.25;
+    font-size: 16px;
     a {
         font-weight: 400;
     }
@@ -82,7 +89,12 @@ p {
                 margin-right: 40px;
                 width: 140px;
             }
+            p:last-child {
+                margin-bottom: 0;
+            }
         }
+    }
+    p {
     }
 }
 .overview {
@@ -140,4 +152,65 @@ p {
 #bottom {
     opacity: 0.6;
     margin-top: 40px;
+}
+
+@media screen and (max-width: 830px) {
+    header {
+        margin-top: 40px;
+        h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        h3 {
+            margin: 20px 0 50px 0;
+            color: $red;
+            a {
+                color: $red;
+                font-size: 20px;
+            }
+        }
+    }
+    .instructors {
+        .row {
+            flex-direction: column;
+            .column {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                img {
+                    margin-bottom: 30px;
+                    width: 140px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    header {
+        margin-top: 60px;
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        h3 {
+            margin: 20px 0 50px 0;
+            color: $red;
+            a {
+                color: $red;
+                font-size: 1em;
+                line-height: 1.25;
+            }
+        }
+    }
+    .page-body {
+        padding: 30px;
+    }
 }
