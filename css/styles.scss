@@ -1,3 +1,5 @@
+$color: rgb(55, 53, 47);
+$red: rgb(224,62,62);
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +8,10 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
+h1, h2, h3, h4, h5, p {
+    color: $color;
+    line-height: 1;
+}
 a {
     color: black;
     text-decoration: underline;
@@ -13,12 +19,38 @@ a {
 
 html {
     overflow-x: hidden;
-    font-size: 20px;
+    font-size: 16px;
     scroll-behavior: smooth;
 }
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+}
+.page-body {
+    margin: 0 auto;
+    padding: 100px;
+    max-width: 1000px;
+}
+header {
+    p {
+        font-size: 6em;
+        margin-bottom: 20px;
+    }
+    h1 {
+        font-size: 4em;
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        margin: 20px 0 50px 0;
+        color: $red;
+        a {
+            color: $red;
+            font-size: 1.25em;
+        }
+    }
+}
+p {
+    margin-bottom: 1em;
+    line-height: 1.25;
 }

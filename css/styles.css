@@ -7,6 +7,11 @@
   -webkit-font-smoothing: antialiased;
 }
 
+h1, h2, h3, h4, h5, p {
+  color: #37352f;
+  line-height: 1;
+}
+
 a {
   color: black;
   text-decoration: underline;
@@ -14,23 +19,42 @@ a {
 
 html {
   overflow-x: hidden;
-  font-size: 20px;
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.page-body {
+  margin: 0 auto;
+  padding: 100px;
+  max-width: 1000px;
+}
+
+header p {
+  font-size: 6em;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+}
+
+header h2 {
+  font-size: 2em;
+}
+
+header h3 {
+  margin: 20px 0 50px 0;
+  color: #e03e3e;
+}
+
+header h3 a {
+  color: #e03e3e;
+  font-size: 1.25em;
+}
+
+p {
+  margin-bottom: 1em;
+  line-height: 1.25;
 }
 /*# sourceMappingURL=styles.css.map */
