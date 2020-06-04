@@ -63,7 +63,9 @@ label {
 
 
 @media screen and (max-width: 1050px) {
-    header { 
+    header {
+        height: 60px;
+        padding: 0 30px;
         ul {
         position: fixed;
         top: 0; left: 100vw;
@@ -103,8 +105,8 @@ label {
         display: flex;
         height: 30px;
         width: 30px;
-        top: 15px;
-        right: 15px;
+        top: 5px;
+        right: 20px;
         padding: 10px;
         img {
             height: 30px;
