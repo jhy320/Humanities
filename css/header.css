@@ -21,6 +21,8 @@ header {
   background: white;
   z-index: 100;
   margin: 0;
+  -webkit-transition-duration: .4s;
+          transition-duration: .4s;
 }
 
 header .logo {
@@ -134,6 +136,8 @@ label {
     background: #000;
   }
   label {
+    -webkit-transition-duration: .4s;
+            transition-duration: .4s;
     z-index: 200;
     display: -webkit-box;
     display: -ms-flexbox;

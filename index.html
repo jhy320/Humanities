@@ -18,9 +18,10 @@
         </script>
 </head>
 <body>
-    <header>
+    <div id="hover"></div>
+    <header id="header">
         <input type="checkbox" id="checkbox" class="checkbox">
-        <label for="checkbox" class="menu-icon transition"><img src="img/menu.svg" alt=""></label>
+        <label for="checkbox" class="menu-icon transition" id="label"><img src="img/menu.svg" alt=""></label>
         <a class="logo" href="/">Humanities Class</a>
         <ul>
             <a onclick="checkbox()" class="link" href="#intro">Intro</a>
@@ -161,5 +162,22 @@
         <p>WeChat: johnyooon</p>
         <p id="bottom">© 2020. All rights reserved.</p>
     </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("label").style.top = "5px";
+                    document.getElementById("header").style.top = "0";
+                } else {
+                    document.getElementById("header").style.top = "-80px";
+                    document.getElementById("label").style.top = "-80px";
+                }
+                prevScrollpos = currentScrollPos;
+            }
+        }
+    </script>
 </body>
 </html>

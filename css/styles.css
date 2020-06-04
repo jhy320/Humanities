@@ -16,15 +16,6 @@ h1, h2, h3, h4, h5, p {
   line-height: 1;
 }
 
-::-webkit-scrollbar {
-  width: 12px;
-  background: white;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #353535;
-}
-
 a {
   color: #353535;
   text-decoration: underline;
@@ -79,7 +70,9 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  background: #F1F6F6;
+  background: url("../img/books.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .hero .info {
@@ -194,6 +187,11 @@ p a {
   margin-bottom: 0;
 }
 
+.instructors .row .column strong {
+  font-size: 2em;
+  font-weight: 400;
+}
+
 .overview {
   margin: 60px 0;
 }
@@ -266,6 +264,13 @@ p a {
   font-weight: 400;
   text-decoration: none;
   border-bottom: 4px solid #353535;
+  -webkit-transition-duration: .4s;
+          transition-duration: .4s;
+}
+
+.interestform:hover {
+  color: black;
+  border-color: black;
 }
 
 .footer {
@@ -380,7 +385,6 @@ p a {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    background: #F1F6F6;
   }
   .hero .info {
     position: absolute;

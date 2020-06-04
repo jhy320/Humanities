@@ -16,13 +16,6 @@ h1, h2, h3, h4, h5, p {
     color: $color;
     line-height: 1;
 }
-::-webkit-scrollbar {
-    width: 12px;
-    background: white;
-}
-::-webkit-scrollbar-thumb {
-    background: $color;
-}
 a {
     color: $color;
     text-decoration: underline;
@@ -57,7 +50,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background: #F1F6F6;
+    background: url('../img/books.jpg');
+    background-size: cover;
+    background-position: center;
     .info {
         position: absolute;
         width: 100%;
@@ -138,6 +133,10 @@ p {
             p:last-child {
                 margin-bottom: 0;
             }
+            strong {
+                font-size: 2em;
+                font-weight: 400;
+            }
         }
     }
 }
@@ -199,6 +198,11 @@ p {
     font-weight: 400;
     text-decoration: none;
     border-bottom: 4px solid $color;
+    transition-duration: .4s;
+    &:hover {
+        color: black;
+        border-color: black;
+    }
 }
 .footer {
     margin-top: 120px;
@@ -280,7 +284,6 @@ p {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        background: #F1F6F6;
         .info {
             position: absolute;
             width: 100%;
