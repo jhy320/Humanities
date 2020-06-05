@@ -115,6 +115,22 @@ body {
   text-align: center;
 }
 
+.hero .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .hero .section h1 {
   font-size: 7vw;
   font-weight: 400;
@@ -123,12 +139,13 @@ body {
 }
 
 .hero .section p {
-  padding: 0;
-  font-size: 24px;
+  padding-bottom: 36px;
+  margin: 0;
+  font-size: 22px;
 }
 
 .hero .section .text {
-  padding: 40px 0;
+  padding: 36px 0;
   max-width: 600px;
 }
 
@@ -424,19 +441,6 @@ p a {
     max-width: 600px;
     font-size: 18px;
   }
-  .hero .section a {
-    font-size: 18px;
-    font-weight: 400;
-    text-decoration: none;
-    color: white;
-    background: #353535;
-    padding: 20px 40px;
-    -webkit-transition-duration: .4s;
-            transition-duration: .4s;
-  }
-  .hero .section a:hover {
-    background: #000;
-  }
   .page-body {
     padding: 30px;
     padding-top: 100px;
@@ -445,6 +449,14 @@ p a {
     font-size: 60px;
     font-weight: 400;
     text-decoration: none;
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .hero {
+    height: auto;
+    width: 100%;
+    padding: 120px 40px 80px 40px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
